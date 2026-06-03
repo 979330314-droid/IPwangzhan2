@@ -1,5 +1,6 @@
 import { brand } from "@/data/site";
 import { ButtonLink } from "@/components/ButtonLink";
+import { ComingSoonLink } from "@/components/ComingSoonLink";
 
 const navItems = [
   { href: "./", label: "首页" },
@@ -19,9 +20,15 @@ export function SiteHeader() {
         </a>
         <nav className="site-nav" aria-label="主导航">
           {navItems.map((item) => (
-            <a href={item.href} key={item.href}>
-              {item.label}
-            </a>
+            item.href === "./" ? (
+              <a href={item.href} key={item.href}>
+                {item.label}
+              </a>
+            ) : (
+              <ComingSoonLink href={item.href} key={item.href}>
+                {item.label}
+              </ComingSoonLink>
+            )
           ))}
         </nav>
         <div className="nav-cta">

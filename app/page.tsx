@@ -1,4 +1,5 @@
 import { brand, caseStudies, heroStats, serviceLines, trustSignals } from "@/data/site";
+import { ComingSoonLink } from "@/components/ComingSoonLink";
 import { LavroMotion } from "@/components/LavroMotion";
 
 const caseWallTitles = ["清华陈晶聊商业", "优核国际教育", "无忧传媒新媒体学苑", "卓豪眼镜"];
@@ -48,12 +49,12 @@ export default function HomePage() {
 
         <div className="lavro-hero-content">
           <p className="lavro-terminal">BAI.AI-IP // PERSONAL SITE</p>
-          <h1 className="lavro-hero-wordmark" data-text="AIIP—BAI">AIIP—BAI</h1>
-          <p className="lavro-hero-subtitle">白先生 / AI 落地 / IP 商业化</p>
+          <h1 className="lavro-hero-wordmark" data-text="AIIP—白先生">AIIP—白先生</h1>
+          <p className="lavro-hero-subtitle">AI 落地 / IP 商业化</p>
           <p className="lavro-hero-copy">{brand.subline}</p>
           <div className="lavro-hero-actions">
-            <a href="./contact.html">联系我</a>
-            <a href="./cases.html">查看案例</a>
+            <ComingSoonLink href="./contact.html">联系我</ComingSoonLink>
+            <ComingSoonLink href="./cases.html">查看案例</ComingSoonLink>
           </div>
         </div>
 
@@ -87,14 +88,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="lavro-section lavro-reveal">
+      <section className="lavro-section lavro-question-section lavro-reveal">
         <div className="lavro-section-heading">
           <p className="lavro-terminal">/// 01. CASE WALL</p>
-          <h2>案例墙</h2>
+          <h2>案例区</h2>
         </div>
         <div className="lavro-case-wall-grid">
           {caseWallItems.map((item, index) => (
-            <a className="lavro-case-wall-card" href="./cases.html" key={item.title}>
+            <ComingSoonLink className="lavro-case-wall-card" href="./cases.html" key={item.title}>
               <figure>
                 <img src={caseWallImages[item.title]} alt={`${item.title}现场照片`} />
               </figure>
@@ -104,21 +105,21 @@ export default function HomePage() {
                 <strong>{item.title}</strong>
                 <p>{item.outcome}</p>
               </div>
-            </a>
+            </ComingSoonLink>
           ))}
-          <a className="lavro-case-wall-more" href="./cases.html">
+          <ComingSoonLink className="lavro-case-wall-more" href="./cases.html">
             <span className="lavro-case-wall-runner">
               <span>VIEW MORE</span>
               <strong>查看更多案例</strong>
             </span>
-          </a>
+          </ComingSoonLink>
         </div>
       </section>
 
-      <section className="lavro-section lavro-split-section lavro-reveal">
-        <div>
+      <section className="lavro-section lavro-split-section lavro-services-section lavro-reveal">
+        <div className="lavro-service-copy">
           <p className="lavro-terminal">/// 02. CURRENTLY BUILDING</p>
-          <h2>我的产品服务</h2>
+          <h2>产品服务</h2>
           <div className="lavro-chip-list">
             {currentFocus.map((item) => (
               <span key={item}>{item}</span>
@@ -141,18 +142,18 @@ export default function HomePage() {
         </div>
         <div className="lavro-question-grid">
           {questionConsults.map((item, index) => (
-            <a className="lavro-question-card" href="./contact.html" key={item.title}>
+            <ComingSoonLink className="lavro-question-card" href="./contact.html" key={item.title}>
               <span>Q{String(index + 1).padStart(2, "0")}</span>
               <strong>{item.title}</strong>
               <p>{item.body}</p>
-            </a>
+            </ComingSoonLink>
           ))}
-          <a className="lavro-question-cta" href="./contact.html">
+          <ComingSoonLink className="lavro-question-cta" href="./contact.html">
             <span className="lavro-question-runner">
               <span>BOOK ASSESSMENT</span>
               <strong>预约测评</strong>
             </span>
-          </a>
+          </ComingSoonLink>
         </div>
       </section>
 
@@ -167,9 +168,9 @@ export default function HomePage() {
               <p key={item}>{item}</p>
             ))}
           </div>
-          <a className="lavro-contact-button" href="./contact.html">
+          <ComingSoonLink className="lavro-contact-button" href="./contact.html">
             SEND REQUEST
-          </a>
+          </ComingSoonLink>
         </div>
       </section>
     </div>

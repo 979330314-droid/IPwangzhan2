@@ -1,4 +1,5 @@
 import { ChevronRight } from "lucide-react";
+import { ComingSoonLink } from "@/components/ComingSoonLink";
 
 type ButtonLinkProps = {
   href: string;
@@ -8,9 +9,9 @@ type ButtonLinkProps = {
 
 export function ButtonLink({ href, children, variant = "primary" }: ButtonLinkProps) {
   return (
-    <a className={`button button-${variant}`} href={href}>
+    <ComingSoonLink className={`button button-${variant}`} href={href}>
       <span>{children}</span>
       <ChevronRight aria-hidden="true" size={17} strokeWidth={2} />
-    </a>
+    </ComingSoonLink>
   );
 }

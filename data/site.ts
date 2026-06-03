@@ -9,8 +9,8 @@ export const brand = {
 };
 
 export const heroStats = [
-  { value: "12+", label: "企业内训代表案例" },
-  { value: "20+", label: "行业智能体与工作流案例" },
+  { value: "20+", label: "企业内训代表案例" },
+  { value: "50+", label: "头部 IP 合作" },
   { value: "300人", label: "单场线下大课规模" },
   { value: "50万", label: "智能体定制现场签约" }
 ];

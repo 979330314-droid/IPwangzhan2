@@ -1,4 +1,5 @@
 import { brand } from "@/data/site";
+import { ComingSoonLink } from "@/components/ComingSoonLink";
 
 export function SiteFooter() {
   return (
@@ -9,9 +10,9 @@ export function SiteFooter() {
           <p className="footer-copy">AI business landing for IP, teams and companies.</p>
         </div>
         <div className="footer-links">
-          <a href="./services.html">服务体系</a>
-          <a href="./cases.html">代表案例</a>
-          <a href="./contact.html">提交需求</a>
+          <ComingSoonLink href="./services.html">服务体系</ComingSoonLink>
+          <ComingSoonLink href="./cases.html">代表案例</ComingSoonLink>
+          <ComingSoonLink href="./contact.html">提交需求</ComingSoonLink>
         </div>
       </div>
     </footer>
