@@ -1213,15 +1213,21 @@ body:has(.lavro-inspired-page) .site-nav a {
   flex: 0 0 auto;
   min-width: 58px;
   height: 34px;
-  border: 1px solid rgba(32, 255, 122, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.56);
   border-radius: 0;
   padding: 0 14px;
-  background: rgba(5, 5, 5, 0.32);
-  color: #20ff7a;
+  background: rgba(5, 5, 5, 0.2);
+  color: rgba(255, 255, 255, 0.92);
   font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   font-size: 12px;
   white-space: nowrap;
   word-break: keep-all;
+}
+
+body:has(.lavro-inspired-page) .site-nav a:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
 }
 
 body:has(.lavro-inspired-page) .nav-cta {
