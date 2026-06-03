@@ -1552,11 +1552,11 @@ body:has(.lavro-inspired-page) .site-footer {
 }
 
 .lavro-inspired-page.is-loaded .lavro-hero-content h1::before {
-  animation: lavro-glitch-loop-left 4s steps(2, end) infinite 180ms;
+  animation: lavro-electric-cut-left 4s steps(2, end) infinite 180ms;
 }
 
 .lavro-inspired-page.is-loaded .lavro-hero-content h1::after {
-  animation: lavro-glitch-loop-right 4s steps(2, end) infinite 210ms;
+  animation: lavro-electric-cut-right 4s steps(2, end) infinite 230ms;
 }
 
 .lavro-hero-subtitle {
@@ -1732,11 +1732,11 @@ body:has(.lavro-inspired-page) .site-footer {
 }
 
 .lavro-inspired-page.is-loaded .lavro-section h2::before {
-  animation: lavro-glitch-loop-left 4s steps(2, end) infinite 360ms;
+  animation: lavro-electric-cut-left 4s steps(2, end) infinite 340ms;
 }
 
 .lavro-inspired-page.is-loaded .lavro-section h2::after {
-  animation: lavro-glitch-loop-right 4s steps(2, end) infinite 430ms;
+  animation: lavro-electric-cut-right 4s steps(2, end) infinite 390ms;
 }
 
 .lavro-intro-section {
@@ -2458,6 +2458,60 @@ body:has(.lavro-inspired-page) .site-footer {
   14% {
     opacity: 0.66;
     clip-path: inset(43% 0 28% 0);
+  }
+}
+
+@keyframes lavro-electric-cut-left {
+  0%,
+  12%,
+  100% {
+    opacity: 0;
+    clip-path: inset(0 0 0 0);
+    transform: translateX(-8px);
+    filter: none;
+  }
+  2% {
+    opacity: 0.96;
+    clip-path: inset(5% 0 76% 0);
+    transform: translateX(-16px);
+    filter: drop-shadow(0 0 9px rgba(32, 255, 122, 0.76));
+  }
+  4% {
+    opacity: 0.72;
+    clip-path: inset(73% 0 9% 0);
+    transform: translateX(10px);
+  }
+  7% {
+    opacity: 0.88;
+    clip-path: inset(35% 0 43% 0);
+    transform: translateX(-12px);
+  }
+}
+
+@keyframes lavro-electric-cut-right {
+  0%,
+  12%,
+  100% {
+    opacity: 0;
+    clip-path: inset(0 0 0 0);
+    transform: translateX(8px);
+    filter: none;
+  }
+  2.5% {
+    opacity: 0.84;
+    clip-path: inset(61% 0 18% 0);
+    transform: translateX(15px);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  }
+  5.5% {
+    opacity: 0.58;
+    clip-path: inset(14% 0 68% 0);
+    transform: translateX(-9px);
+  }
+  8.5% {
+    opacity: 0.72;
+    clip-path: inset(44% 0 31% 0);
+    transform: translateX(12px);
   }
 }
 
