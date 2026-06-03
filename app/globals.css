@@ -1839,11 +1839,12 @@ body:has(.lavro-inspired-page) .site-footer {
 }
 
 .lavro-case-wall-card strong {
-  max-width: 13ch;
+  max-width: 100%;
   color: #fff;
-  font-size: clamp(2rem, 4.3vw, 4.2rem);
+  font-size: clamp(2rem, 3.4vw, 3.45rem);
   font-weight: 900;
-  line-height: 0.96;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .lavro-case-wall-card p {
@@ -2403,6 +2404,10 @@ body:has(.lavro-inspired-page) .site-footer {
 
   .lavro-case-wall-card > div {
     min-height: 210px;
+  }
+
+  .lavro-case-wall-card strong {
+    white-space: normal;
   }
 
   .lavro-case-wall-more {
