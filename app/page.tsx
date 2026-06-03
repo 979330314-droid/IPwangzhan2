@@ -67,25 +67,23 @@ export default function HomePage() {
         <div className="lavro-section-heading">
           <p className="lavro-terminal">ONLINE ROUTINE. AI BUSINESS SYNC.</p>
           <h2>我的经历</h2>
+          <div className="lavro-stats">
+            {heroStats.map((item) => (
+              <div key={item.label}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
         <div className="lavro-intro-copy">
           <p>
             我从广告公司、大厂内容平台一路走到创业和 AI 赛道，做过品牌营销、游戏合作、新媒体内容，
             也经历过餐饮、剧本杀、短视频和课程转型。2023 年 GPT 爆发后，我开始把 AI 放进内容、IP、销售和交付里。
           </p>
-          <div className="lavro-intro-proof">
-            <figure className="lavro-portrait">
-              <img src="./bai-portrait.jpg" alt="白先生个人照片" />
-            </figure>
-            <div className="lavro-stats">
-              {heroStats.map((item) => (
-                <div key={item.label}>
-                  <strong>{item.value}</strong>
-                  <span>{item.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <figure className="lavro-portrait">
+            <img src="./bai-portrait.jpg" alt="白先生个人照片" />
+          </figure>
         </div>
       </section>
 
