@@ -1552,11 +1552,11 @@ body:has(.lavro-inspired-page) .site-footer {
 }
 
 .lavro-inspired-page.is-loaded .lavro-hero-content h1::before {
-  animation: lavro-glitch-left 760ms steps(2, end) both 180ms;
+  animation: lavro-glitch-loop-left 4s steps(2, end) infinite 180ms;
 }
 
 .lavro-inspired-page.is-loaded .lavro-hero-content h1::after {
-  animation: lavro-glitch-right 680ms steps(2, end) both 210ms;
+  animation: lavro-glitch-loop-right 4s steps(2, end) infinite 210ms;
 }
 
 .lavro-hero-subtitle {
@@ -1690,7 +1690,18 @@ body:has(.lavro-inspired-page) .site-footer {
   margin-inline: auto;
 }
 
+.lavro-question-section .lavro-section-heading {
+  justify-items: center;
+  text-align: center;
+}
+
+.lavro-question-section .lavro-section-heading h2 {
+  margin-inline: auto;
+}
+
 .lavro-section h2 {
+  position: relative;
+  width: max-content;
   max-width: 920px;
   margin: 0;
   color: #fff;
@@ -1698,6 +1709,34 @@ body:has(.lavro-inspired-page) .site-footer {
   font-weight: 900;
   line-height: 0.92;
   letter-spacing: 0;
+}
+
+.lavro-section h2::before,
+.lavro-section h2::after {
+  position: absolute;
+  inset: 0;
+  content: attr(data-text);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lavro-section h2::before {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--terminal);
+  transform: translateX(-5px);
+}
+
+.lavro-section h2::after {
+  color: rgba(255, 255, 255, 0.86);
+  transform: translateX(5px);
+}
+
+.lavro-inspired-page.is-loaded .lavro-section h2::before {
+  animation: lavro-glitch-loop-left 4s steps(2, end) infinite 360ms;
+}
+
+.lavro-inspired-page.is-loaded .lavro-section h2::after {
+  animation: lavro-glitch-loop-right 4s steps(2, end) infinite 430ms;
 }
 
 .lavro-intro-section {
@@ -2377,6 +2416,48 @@ body:has(.lavro-inspired-page) .site-footer {
   66% {
     opacity: 0.64;
     clip-path: inset(42% 0 28% 0);
+  }
+}
+
+@keyframes lavro-glitch-loop-left {
+  0%,
+  18%,
+  100% {
+    opacity: 0;
+    clip-path: inset(0 0 0 0);
+  }
+  3% {
+    opacity: 0.9;
+    clip-path: inset(7% 0 70% 0);
+  }
+  7% {
+    opacity: 0.62;
+    clip-path: inset(66% 0 9% 0);
+  }
+  12% {
+    opacity: 0.78;
+    clip-path: inset(34% 0 40% 0);
+  }
+}
+
+@keyframes lavro-glitch-loop-right {
+  0%,
+  18%,
+  100% {
+    opacity: 0;
+    clip-path: inset(0 0 0 0);
+  }
+  4% {
+    opacity: 0.72;
+    clip-path: inset(58% 0 17% 0);
+  }
+  9% {
+    opacity: 0.54;
+    clip-path: inset(17% 0 62% 0);
+  }
+  14% {
+    opacity: 0.66;
+    clip-path: inset(43% 0 28% 0);
   }
 }
 

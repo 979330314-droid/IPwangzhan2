@@ -67,7 +67,7 @@ export default function HomePage() {
       <section className="lavro-section lavro-intro-section lavro-reveal">
         <div className="lavro-section-heading">
           <p className="lavro-terminal">ONLINE ROUTINE. AI BUSINESS SYNC.</p>
-          <h2>我的经历</h2>
+          <h2 data-text="我的经历">我的经历</h2>
           <div className="lavro-stats">
             {heroStats.map((item) => (
               <div key={item.label}>
@@ -91,7 +91,7 @@ export default function HomePage() {
       <section className="lavro-section lavro-case-section lavro-reveal">
         <div className="lavro-section-heading">
           <p className="lavro-terminal">/// 01. CASE WALL</p>
-          <h2>案例区</h2>
+          <h2 data-text="案例区">案例区</h2>
         </div>
         <div className="lavro-case-wall-grid">
           {caseWallItems.map((item, index) => (
@@ -119,7 +119,7 @@ export default function HomePage() {
       <section className="lavro-section lavro-split-section lavro-services-section lavro-reveal">
         <div className="lavro-service-copy">
           <p className="lavro-terminal">/// 02. CURRENTLY BUILDING</p>
-          <h2>产品服务</h2>
+          <h2 data-text="产品服务">产品服务</h2>
           <div className="lavro-chip-list">
             {currentFocus.map((item) => (
               <span key={item}>{item}</span>
@@ -138,7 +138,7 @@ export default function HomePage() {
       <section className="lavro-section lavro-question-section lavro-reveal">
         <div className="lavro-section-heading">
           <p className="lavro-terminal">/// 03. QUESTION CONSULTING</p>
-          <h2>问题咨询</h2>
+          <h2 data-text="问题咨询">问题咨询</h2>
         </div>
         <div className="lavro-question-grid">
           {questionConsults.map((item, index) => (
@@ -160,7 +160,7 @@ export default function HomePage() {
       <section className="lavro-section lavro-contact-section lavro-reveal">
         <div>
           <p className="lavro-terminal">/// 04. CONTACT NETWORK</p>
-          <h2>联系我</h2>
+          <h2 data-text="联系我">联系我</h2>
         </div>
         <div>
           <div className="lavro-signal-list">
