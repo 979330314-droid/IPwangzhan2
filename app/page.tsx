@@ -88,7 +88,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="lavro-section lavro-question-section lavro-reveal">
+      <section className="lavro-section lavro-case-section lavro-reveal">
         <div className="lavro-section-heading">
           <p className="lavro-terminal">/// 01. CASE WALL</p>
           <h2>案例区</h2>
@@ -135,7 +135,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="lavro-section lavro-reveal">
+      <section className="lavro-section lavro-question-section lavro-reveal">
         <div className="lavro-section-heading">
           <p className="lavro-terminal">/// 03. QUESTION CONSULTING</p>
           <h2>问题咨询</h2>

@@ -4,7 +4,7 @@ export const brand = {
   name: "白先生 AI·IP",
   headline: "我是白先生。",
   subline:
-    "我帮你把 AI 用进真实业务里。我不把 AI 讲成一堆工具名，更关心你的内容、销售、交付和团队协作，能不能真的变快、变清楚、变好成交。",
+    "把 AI 融进真实业务。",
   contactLabel: "把问题发给我"
 };
 
